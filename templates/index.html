@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quick Todos</title>
+		<link rel="stylesheet" type="text/css" href="/css/styles.css">
+		<script data-main="/js/main.js" src="/js/libraries/require/require.js"></script>
+	</head>
+	<body>
+		<div id="todoapp">
+			<div class="title"><h1>Quick Todos</h1></div>
+			{% if loggedIn %}
+				<div id="logout"><a href="/logout">Logout</a></div>
+				<div class="content">
+					<div id="create-todo">
+						<label>Priority: <select id="todo-priority">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3" selected="selected">3</option>
+						</select></label>
+						<label> Due: <input id="todo-due" placeholder="When is this due?" type="date"></label>
+						<input id="new-todo" placeholder="What do you need to do?" type="text">
+					</div>
+					<div id="sortBy">
+						<span id="sortLabel">Sort by</span>
+						<input type='radio' name='sort' value="byDate" checked="checked"><span>Date</span>
+						<input type='radio' name='sort' value="byPriority"><span>Priority</span>
+					</div>
+					<div id="todos">
+						<ul id="todo-list"></ul>
+					</div>
+					<div id="todo-stats">						
+					</div>
+				</div>
+			{% else %}
+				<div class="login">
+					<span id="loginTxt">Username,password if already registered or Desired username,password to register</span>
+					<div id="loginForm">
+						<form method="post">
+							<input type="text" name="username" placeholder="Username"><br>
+							<input type="password" name="password" placeholder="Password">
+							<span id="error">{{ error }}</span>
+							<input type="submit">
+						</form>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	</body>
+</html>

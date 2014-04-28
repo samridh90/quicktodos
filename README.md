@@ -1,4 +1,3 @@
-quicktodos
-==========
+#A quick todo app
 
-todo app - Python and Backbone
+This is a demo app which uses Google app engine at the backend and Backbone.js on the frontend.

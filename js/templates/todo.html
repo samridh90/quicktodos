@@ -1,0 +1,13 @@
+<div class="todo <%= done ? 'done' : '' %>">
+<div class="display">
+  <input class="check" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+  <div class="todo-content"><%- content %></div>
+  <div class="todo-data">
+  	Priority: <%- priority %> | Due date: <%- due %>
+  </div>
+  <span class="todo-destroy">X</span>
+</div>
+<div class="edit">
+  <input class="todo-input" type="text" value="<%- content %>" />
+</div>
+</div>

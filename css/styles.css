@@ -1,0 +1,223 @@
+html, body, div, span, h1{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ul {
+	list-style: none;
+}
+a img {
+	border: none;
+}
+
+html {
+	background: #eeeeee;
+}
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4em;
+	background: #eeeeee;
+	color: #333333;
+}
+
+#todoapp {
+	width: 600px;
+	margin: 0 auto 40px;
+	background: white;
+	padding: 20px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+}
+#todoapp h1 {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	padding: 20px 0 30px 0;
+	line-height: 1;
+}
+
+#create-todo {
+	position: relative;
+}
+#create-todo input, #loginForm input{
+	width: 580px;
+	font-size: 18px;
+	font-family: inherit;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+	padding: 6px;
+	border: 1px solid #999999;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+#create-todo input[type=date]{
+	width: 397px;
+}
+#create-todo select{
+	width: 70px;
+	font-size: 18px;
+	font-family: inherit;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+	padding: 6px;
+}
+
+#create-todo label, #loginTxt, #error{
+	font-size: 18px;
+	font-family: inherit;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+}
+
+#error{
+	color: red;
+}
+
+#sortBy {
+	padding-top: 30px;
+}
+
+#todo-list {
+	margin-top: 10px;
+	padding: 0px;
+}
+#todo-list .todo-data {
+	padding-left: 30px;
+	font-size: 12px;
+}
+#todo-list li {
+	padding: 5px 20px 11px 0;
+	position: relative;
+	font-size: 18px;
+	line-height: 1.1em;
+	border-bottom: 1px solid #cccccc;
+}
+#todo-list li:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+}
+#todo-list li.editing {
+	padding: 0;
+	border-bottom: 0;
+}
+#todo-list .editing .display,
+#todo-list .edit {
+	display: none;
+}
+#todo-list .editing .edit {
+	display: block;
+}
+#todo-list .editing input {
+	width: 560px;
+	font-size: 18px;
+	font-family: inherit;
+	margin: 0;
+	line-height: 1.4em;
+	border: 0;
+	outline: none;
+	padding: 5px 7px 0px 10px;
+	border: 1px solid #999999;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+}
+#todo-list .check {
+	position: relative;
+	top: 4px;
+	margin: 0 10px 0 7px;
+	float: left;
+}
+#todo-list .done .todo-content {
+	text-decoration: line-through;
+	color: #777777;
+}
+#todo-list .todo-destroy {
+	position: absolute;
+	right: 5px;
+	top: 14px;
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+#todo-list li:hover .todo-destroy {
+	display: block;
+}
+#todo-list .todo-destroy:hover {
+	font-weight: bold;
+}
+
+#todo-stats {
+	*zoom: 1;
+	margin-top: 10px;
+	color: #777777;
+}
+#todo-stats:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+}
+#todo-stats .todo-count {
+	float: left;
+}
+#todo-stats .todo-count .number {
+	font-weight: bold;
+	color: #333333;
+}
+#todo-stats .todo-clear {
+	float: right;
+}
+#todo-stats .todo-clear a {
+	color: #777777;
+	font-size: 12px;
+}
+#todo-stats .todo-clear a:visited {
+	color: #777777;
+}
+#todo-stats .todo-clear a:hover {
+	color: #336699;
+}
+#logout {
+	position: relative;
+	display: inline;
+	top: -100px;
+	right: -560px;  
+}
+#logout a {
+	color: #777777;
+	font-size: 12px;
+	text-decoration: none;
+}
+#logout a:visited {
+	color: #777777;
+}
+#logout a:hover {
+	color: #336699;;
+}
